@@ -17,7 +17,7 @@
                 left: pickerPosition + 'px'
             }" class="hue-pointer"></div>
             </div>
-            <div class="btn-ico">
+            <div class="btn-ico" @click="github">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                     id="mdi-github-circle" width="24" height="24" viewBox="0 0 24 24">
                     <path
@@ -78,6 +78,9 @@
                 var x = e.touches[0].pageX - (rect.left - bodyRect.left);
                 var y = e.touches[0].pageY - (rect.top - bodyRect.top);
                 return [x, y];
+            },
+            github() {
+                window.open('https://github.com/bediu/lightcolors.co','_blank');
             }
         },
         mounted() {
